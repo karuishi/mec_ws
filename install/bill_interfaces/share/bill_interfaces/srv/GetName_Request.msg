@@ -1,1 +1,0 @@
-string default_name

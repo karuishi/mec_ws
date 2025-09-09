@@ -1,1 +1,0 @@
-string default_text_listened

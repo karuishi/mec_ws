@@ -1,9 +1,0 @@
-<library path="mec_firmware"> 
-    <class name="mec_firmware/MecHardwareInterface"
-           type="mec_firmware::MecHardwareInterface"
-           base_class_type="hardware_interface::SystemInterface">
-           <description>
-                MEC Hardware Interface for Bill 
-           </description>
-    </class>
-</library>

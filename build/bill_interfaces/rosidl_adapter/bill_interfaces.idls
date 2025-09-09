@@ -1,7 +1,0 @@
-/home/bill8/mec_ws/mec_ws/build/bill_interfaces/rosidl_adapter/bill_interfaces:msg/MissionStatus.idl
-/home/bill8/mec_ws/mec_ws/build/bill_interfaces/rosidl_adapter/bill_interfaces:srv/GetName.idl
-/home/bill8/mec_ws/mec_ws/build/bill_interfaces/rosidl_adapter/bill_interfaces:srv/SearchFor.idl
-/home/bill8/mec_ws/mec_ws/build/bill_interfaces/rosidl_adapter/bill_interfaces:srv/GetTrained.idl
-/home/bill8/mec_ws/mec_ws/build/bill_interfaces/rosidl_adapter/bill_interfaces:srv/ExecuteSpin.idl
-/home/bill8/mec_ws/mec_ws/build/bill_interfaces/rosidl_adapter/bill_interfaces:srv/SaySomething.idl
-/home/bill8/mec_ws/mec_ws/build/bill_interfaces/rosidl_adapter/bill_interfaces:srv/ListenSomething.idl
