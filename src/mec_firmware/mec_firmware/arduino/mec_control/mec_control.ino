@@ -1,7 +1,7 @@
 #include <PID_v1.h>
 #define left_L298N_enA 13  //front-left motor
-#define left_L298N_in1 26
-#define left_L298N_in2 25
+#define left_L298N_in1 25
+#define left_L298N_in2 26
 #define left_L298N_enB 14 // rear-left motor
 #define left_L298N_in3 12
 #define left_L298N_in4 27
@@ -76,7 +76,7 @@ double kp_rr=10.0, ki_rr=7.5, kd_rr=0.1;
 // PID Objects instanciation
 PID frontLeftMotor(&front_left_wheel_meas_vel, &front_left_wheel_cmd, &front_left_wheel_cmd_vel, kp_fl, ki_fl, kd_fl, DIRECT);
 PID frontRightMotor(&front_right_wheel_meas_vel, &front_right_wheel_cmd, &front_right_wheel_cmd_vel, kp_fr, ki_fr, kd_fr, DIRECT);
-PID rearLeftMotor(&rear_left_wheel_cmd_vel, &rear_left_wheel_cmd, &rear_left_wheel_cmd_vel, kp_rl, ki_rl, kd_rl, DIRECT);
+PID rearLeftMotor(&rear_left_wheel_meas_vel, &rear_left_wheel_cmd, &rear_left_wheel_cmd_vel, kp_rl, ki_rl, kd_rl, DIRECT);
 PID rearRightMotor(&rear_right_wheel_meas_vel, &rear_right_wheel_cmd, &rear_right_wheel_cmd_vel, kp_rr, ki_rr, kd_rr, DIRECT);
 
 void setup() {
@@ -93,7 +93,7 @@ Serial.begin(115200);
 void loop() {
   if(Serial.available())
   {
-  //  parseMessage(); // parse the message read command velocities sent from ROS2_contrl) 
+    parseMessage(); // parse the message read command velocities sent from ROS2_contrl) 
   }
   // compute measured velocity from encoderś counter
   unsigned long current_millis = millis();
@@ -111,7 +111,7 @@ void loop() {
                           "fr"+ front_right_encoder_sign + String(front_right_wheel_meas_vel) + "," +
                           "rl" + rear_left_encoder_sign + String(rear_left_wheel_meas_vel) + "," + 
                           "rr"+ rear_right_encoder_sign + String(rear_right_wheel_meas_vel) + ",";    
-    String encoder_test = "fln01.00,frp00.00,rlp00.00,rrn01.00,";                                        
+    String encoder_test = "fln01.00,frp01.00,rlp01.00,rrp01.00,";                                        
     Serial.println(encoder_read);
     last_millis = current_millis;
     front_left_encoder_counter = 0;
@@ -121,13 +121,13 @@ void loop() {
   }
  
 
-
 }
 void adjust_and_execute_commands()
 {
 /***********TESTE *************/
 // Valores usados para testes do motor 
-front_left_cmd_sign="p";
+/*
+front_left_cmd_sign="n";
 front_right_cmd_sign="n";
 rear_left_cmd_sign="n";
 rear_right_cmd_sign="n";
@@ -140,7 +140,7 @@ is_front_right_wheel_forward = true;
 is_rear_left_wheel_forward = true;
 is_rear_right_wheel_forward = true;
 
-
+*/
 // setup wheels' direction based on cmd_sign
 // front-left motor
 if (front_left_cmd_sign == "p" && !is_front_left_wheel_forward)
@@ -217,12 +217,12 @@ if (rear_right_cmd_sign == "n" && is_rear_right_wheel_forward)
   //digitalWrite(right_L298N_in4, HIGH - digitalRead(right_L298N_in4)); 
   digitalWrite(right_L298N_in3, LOW);
   digitalWrite(right_L298N_in4, HIGH);
-
   is_rear_right_wheel_forward = false; 
 }
 /***********TESTE *************/
 /* COMENTADO PARA EFEITO DE TESTES E VALIDAÇÃO DOS MOTORES
 // use PID objects to compute the new wheel commands (x_x_wheel_cmd)
+*/
 frontLeftMotor.Compute(); // compute the new front_left_wheel_cmd
 frontRightMotor.Compute(); // compute the new front_right_wheel_cmd
 rearLeftMotor.Compute();  // compute the new rear_left_wheel_cmd
@@ -234,10 +234,10 @@ if (front_left_wheel_cmd_vel == 0.0)
 if (front_right_wheel_cmd_vel == 0.0) 
   front_right_wheel_cmd = 0.0;
 if(rear_left_wheel_cmd_vel == 0.0) 
-  rear_left_wheel_cmd_vel = 0.0;
-if (rear_right_wheel_cmd_vel = 0.0)
+  rear_left_wheel_cmd = 0.0;
+if (rear_right_wheel_cmd_vel == 0.0)
   rear_right_wheel_cmd = 0.0;
-*/
+
 // send new wheel commands (x_x_wheel_cmd) to the motor
 analogWrite(left_L298N_enA, front_left_wheel_cmd);   // front-left motor
 analogWrite(left_L298N_enB, rear_left_wheel_cmd);   // rear-left motor
@@ -284,19 +284,21 @@ void parseMessage()
     while (buffer[i] != ',' && buffer[i] != '\0') i++;
       if (buffer[i] == ',') i++;
   }
+  /*
   // imprime os valores lidos
-  // Serial.print("FL = "); Serial.print(front_left_encoder_sign);
-  // Serial.print(" "); Serial.println(front_left_wheel_meas_vel);
+   Serial.print("FL = "); Serial.print(front_left_encoder_sign);
+   Serial.print(" "); Serial.println(front_left_wheel_meas_vel);
 
-  //Serial.print("FR = "); Serial.print(front_right_encoder_sign);
-  // Serial.print(" "); Serial.println(front_right_wheel_meas_vel);
+  Serial.print("FR = "); Serial.print(front_right_encoder_sign);
+  Serial.print(" "); Serial.println(front_right_wheel_meas_vel);
 
-  // Serial.print("RL = "); Serial.print(rear_left_encoder_sign);
-  // Serial.print(" "); Serial.println(rear_left_wheel_meas_vel);
+   Serial.print("RL = "); Serial.print(rear_left_encoder_sign);
+   Serial.print(" "); Serial.println(rear_left_wheel_meas_vel);
 
-  // Serial.print("RR = "); Serial.print(rear_right_encoder_sign);
-  // Serial.print(" "); Serial.println(rear_right_wheel_meas_vel);
-  // Serial.println("---------------------");
+   Serial.print("RR = "); Serial.print(rear_right_encoder_sign);
+   Serial.print(" "); Serial.println(rear_right_wheel_meas_vel);
+   Serial.println("---------------------");
+   */
 }
 void setupPins() {
   pinMode(left_L298N_enA, OUTPUT); //front-left motor
@@ -322,7 +324,7 @@ void setupPins() {
   pinMode(rear_right_encoder_phaseB, INPUT);
 
   attachInterrupt(digitalPinToInterrupt(front_left_encoder_phaseA), frontLeftEncoderCallback, RISING);
-  attachInterrupt(digitalPinToInterrupt(front_right_encoder_phaseA), frontRighttEncoderCallback, RISING);
+  attachInterrupt(digitalPinToInterrupt(front_right_encoder_phaseA), frontRightEncoderCallback, RISING);
   attachInterrupt(digitalPinToInterrupt(rear_left_encoder_phaseA), rearLeftEncoderCallback, RISING);
   attachInterrupt(digitalPinToInterrupt(rear_right_encoder_phaseA), rearRightEncoderCallback, RISING);
 }
@@ -340,7 +342,7 @@ void frontLeftEncoderCallback()
     front_left_encoder_sign="p";
   }
 }
-void frontRighttEncoderCallback() 
+void frontRightEncoderCallback() 
 {
   front_right_encoder_counter++;
   if(digitalRead(front_right_encoder_phaseB) == HIGH) 
@@ -369,11 +371,11 @@ void rearRightEncoderCallback()
   rear_right_encoder_counter++;
   if(digitalRead(rear_right_encoder_phaseB) == HIGH) 
   {
-    rear_right_encoder_sign="p";
+    rear_right_encoder_sign="n";
   }
   else 
   {
-    rear_right_encoder_sign="n";
+    rear_right_encoder_sign="p";
   }
 }
 

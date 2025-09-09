@@ -33,12 +33,13 @@ CallbackReturn MecHardwareInterface::on_init(const hardware_interface::HardwareI
     }
     catch (std::out_of_range &e)
     {
-            RCLCPP_FATAL(rclcpp::get_logger("MecHardwareInterface"),"No Serial POrt Provided! Aborting");
+            RCLCPP_FATAL(rclcpp::get_logger("MecHardwareInterface"),"No Serial Port Provided! Aborting");
             return CallbackReturn::FAILURE;
     }
-    velocity_commands_.reserve(info_.joints.size());
-    position_states_.reserve(info_.joints.size());
-    velocity_states_.reserve(info_.joints.size());
+    velocity_commands_.resize(info_.joints.size(), 0.0);
+    position_states_.resize(info_.joints.size(), 0.0);
+    velocity_states_.resize(info_.joints.size(), 0.0);
+
     last_run_ = rclcpp::Clock().now();
 
     return CallbackReturn::SUCCESS;
@@ -87,7 +88,8 @@ CallbackReturn MecHardwareInterface::on_deactivate(const rclcpp_lifecycle::State
 {
    (void)previous_state;
 
-    RCLCPP_INFO(rclcpp::get_logger("MecHardwareInterface"), "Stoping robot hardware...");
+    RCLCPP_INFO(rclcpp::get_logger("MecHardwareInterface"), "Stopping robot hardware...");
+  
     try 
     {
         esp32_.Close();
@@ -124,8 +126,14 @@ hardware_interface::return_type MecHardwareInterface::read(const rclcpp::Time &t
         std::stringstream ss(message);
         std::string res;
         int multiplier=1;
+
+      RCLCPP_WARN(rclcpp::get_logger("MecHardwareInterface"),"Reading: '%s'", message.c_str());
         while (std::getline(ss, res, ','))
         {
+            if (res.size() < 3) {
+               // RCLCPP_WARN(rclcpp::get_logger("MecHardwareInterface"),"Mensagem inválida recebida: '%s'", res.c_str());
+                continue; // end of the message reached or message not well-formed  
+            }   
             multiplier = res.at(2) == 'p' ? 1 : -1;  
 
             // Front Left (fl)
@@ -206,6 +214,8 @@ hardware_interface::return_type MecHardwareInterface::write(const rclcpp::Time &
     << ",fr" << front_right_wheel_sign << compensate_zeros_front_right << std::abs(velocity_commands_[1]) 
     << ",rl" << rear_left_wheel_sign << compensate_zeros_rear_left << std::abs(velocity_commands_[2])    
     << ",rr" << rear_right_wheel_sign << compensate_zeros_rear_right << std::abs(velocity_commands_[3]) << ",\n";
+
+    RCLCPP_WARN(rclcpp::get_logger("MecHardwareInterface"),"Writing: '%s'", message_stream.str().c_str());
 
     try {
         esp32_.Write(message_stream.str());

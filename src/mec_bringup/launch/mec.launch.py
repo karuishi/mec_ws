@@ -26,7 +26,8 @@ def generate_launch_description():
         remappings=[
             ('/controller_manager/robot_description', '/robot_description'),
             ('/mecanum_drive_controller/odometry', '/odom'),
-            ('/mecanum_drive_controller/tf_odometry', '/tf')
+            ('/mecanum_drive_controller/tf_odometry', '/tf'),
+            ('/mecanum_drive_controller/reference_unstamped','/cmd_vel')
         ]
     )  
     joint_state_broadcaster_spawner = Node(

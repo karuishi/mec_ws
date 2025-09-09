@@ -3,7 +3,7 @@
            type="mec_firmware::MecHardwareInterface"
            base_class_type="hardware_interface::SystemInterface">
            <description>
-                MEC Hardware Interface
+                MEC Hardware Interface for Bill 
            </description>
     </class>
 </library>
