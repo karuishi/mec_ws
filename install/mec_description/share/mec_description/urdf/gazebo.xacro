@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="billbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Gazebo -->
+     <!-- plugin do Humble -->   
+    <gazebo>
+        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+            <robotNamespace>/</robotNamespace>
+            <parameters>$(find billbot_controller)/config/billbot_controllers.yaml</parameters>
+        </plugin>
+    </gazebo>     
+    <gazebo reference="chassis_link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+    <gazebo reference="front_left_wheel">
+        <material>Gazebo/White</material>
+    </gazebo>
+    <gazebo reference="front_right_wheel">
+        <material>Gazebo/White</material>
+    </gazebo>
+    <gazebo reference="rear_left_wheel">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <gazebo reference="rear_right_wheel">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+</robot>

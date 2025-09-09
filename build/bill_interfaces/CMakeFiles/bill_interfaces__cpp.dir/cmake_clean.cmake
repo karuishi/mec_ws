@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/bill_interfaces__cpp"
+  "rosidl_generator_cpp/bill_interfaces/msg/detail/mission_status__builder.hpp"
+  "rosidl_generator_cpp/bill_interfaces/msg/detail/mission_status__struct.hpp"
+  "rosidl_generator_cpp/bill_interfaces/msg/detail/mission_status__traits.hpp"
+  "rosidl_generator_cpp/bill_interfaces/msg/detail/mission_status__type_support.hpp"
+  "rosidl_generator_cpp/bill_interfaces/msg/mission_status.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/execute_spin__builder.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/execute_spin__struct.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/execute_spin__traits.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/execute_spin__type_support.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/get_name__builder.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/get_name__struct.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/get_name__traits.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/get_name__type_support.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/get_trained__builder.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/get_trained__struct.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/get_trained__traits.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/get_trained__type_support.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/listen_something__builder.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/listen_something__struct.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/listen_something__traits.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/listen_something__type_support.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/say_something__builder.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/say_something__struct.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/say_something__traits.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/say_something__type_support.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/search_for__builder.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/search_for__struct.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/search_for__traits.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/detail/search_for__type_support.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/execute_spin.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/get_name.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/get_trained.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/listen_something.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/say_something.hpp"
+  "rosidl_generator_cpp/bill_interfaces/srv/search_for.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/bill_interfaces__cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

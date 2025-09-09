@@ -1,0 +1,80 @@
+[1.302s] Invoking command in '/home/bill8/mec_ws/mec_ws/src/my_py_pkg': AMENT_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/my_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/my_interfaces LD_LIBRARY_PATH=/home/bill8/mec_ws/mec_ws/install/my_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bill8/mec_ws/mec_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/bill8/mec_ws/mec_ws/install/my_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_py_pkg build --build-base /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build install --record /home/bill8/mec_ws/mec_ws/build/my_py_pkg/install.log --single-version-externally-managed install_data
+[1.734s] running egg_info
+[1.735s] creating ../../build/my_py_pkg/my_py_pkg.egg-info
+[1.736s] writing ../../build/my_py_pkg/my_py_pkg.egg-info/PKG-INFO
+[1.736s] writing dependency_links to ../../build/my_py_pkg/my_py_pkg.egg-info/dependency_links.txt
+[1.736s] writing entry points to ../../build/my_py_pkg/my_py_pkg.egg-info/entry_points.txt
+[1.736s] writing requirements to ../../build/my_py_pkg/my_py_pkg.egg-info/requires.txt
+[1.737s] writing top-level names to ../../build/my_py_pkg/my_py_pkg.egg-info/top_level.txt
+[1.737s] writing manifest file '../../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[1.739s] reading manifest file '../../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[1.741s] writing manifest file '../../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[1.741s] running build
+[1.741s] running build_py
+[1.742s] creating /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build
+[1.742s] creating /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib
+[1.742s] creating /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.742s] copying my_py_pkg/navigation.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.742s] copying my_py_pkg/geometric_calculator_server.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.743s] copying my_py_pkg/calculator_client_param.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.743s] copying my_py_pkg/radioreceiver.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.743s] copying my_py_pkg/my_first_node.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.743s] copying my_py_pkg/mission_control.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.743s] copying my_py_pkg/voice_speech_recognition.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.744s] copying my_py_pkg/calculator_client.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.744s] copying my_py_pkg/python_template.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.744s] copying my_py_pkg/calculator_server.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.744s] copying my_py_pkg/radiostation.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.744s] copying my_py_pkg/face_recognition.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.744s] copying my_py_pkg/hw_status_publisher.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.745s] copying my_py_pkg/__init__.py -> /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg
+[1.745s] running install
+[1.745s] running install_lib
+[1.745s] creating /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.745s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/navigation.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.746s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/geometric_calculator_server.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.746s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/calculator_client_param.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.746s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/radioreceiver.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.746s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/my_first_node.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.746s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/mission_control.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.747s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/voice_speech_recognition.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.747s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/calculator_client.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.747s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/python_template.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.747s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/calculator_server.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.747s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/radiostation.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.747s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/face_recognition.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.748s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/hw_status_publisher.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.748s] copying /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build/lib/my_py_pkg/__init__.py -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[1.748s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/navigation.py to navigation.cpython-310.pyc
+[1.748s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/geometric_calculator_server.py to geometric_calculator_server.cpython-310.pyc
+[1.749s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/calculator_client_param.py to calculator_client_param.cpython-310.pyc
+[1.750s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/radioreceiver.py to radioreceiver.cpython-310.pyc
+[1.750s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/my_first_node.py to my_first_node.cpython-310.pyc
+[1.751s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/mission_control.py to mission_control.cpython-310.pyc
+[1.753s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/voice_speech_recognition.py to voice_speech_recognition.cpython-310.pyc
+[1.754s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/calculator_client.py to calculator_client.cpython-310.pyc
+[1.755s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/python_template.py to python_template.cpython-310.pyc
+[1.755s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/calculator_server.py to calculator_server.cpython-310.pyc
+[1.756s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/radiostation.py to radiostation.cpython-310.pyc
+[1.757s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/face_recognition.py to face_recognition.cpython-310.pyc
+[1.757s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/hw_status_publisher.py to hw_status_publisher.cpython-310.pyc
+[1.758s] byte-compiling /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/__init__.py to __init__.cpython-310.pyc
+[1.758s] running install_data
+[1.758s] creating /home/bill8/mec_ws/mec_ws/install/my_py_pkg/share/ament_index
+[1.759s] creating /home/bill8/mec_ws/mec_ws/install/my_py_pkg/share/ament_index/resource_index
+[1.759s] creating /home/bill8/mec_ws/mec_ws/install/my_py_pkg/share/ament_index/resource_index/packages
+[1.759s] copying resource/my_py_pkg -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/share/ament_index/resource_index/packages
+[1.759s] copying package.xml -> /home/bill8/mec_ws/mec_ws/install/my_py_pkg/share/my_py_pkg
+[1.759s] running install_egg_info
+[1.762s] Copying ../../build/my_py_pkg/my_py_pkg.egg-info to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg-0.0.0-py3.10.egg-info
+[1.763s] running install_scripts
+[1.800s] Installing calculator_client script to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/my_py_pkg
+[1.801s] Installing calculator_client_param script to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/my_py_pkg
+[1.801s] Installing calculator_server script to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/my_py_pkg
+[1.801s] Installing geometric_calculator_server script to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/my_py_pkg
+[1.801s] Installing hw_status_publisher script to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/my_py_pkg
+[1.801s] Installing py_node script to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/my_py_pkg
+[1.801s] Installing radioreceiver script to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/my_py_pkg
+[1.801s] Installing radiostation script to /home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/my_py_pkg
+[1.802s] writing list of installed files to '/home/bill8/mec_ws/mec_ws/build/my_py_pkg/install.log'
+[1.840s] Invoked command in '/home/bill8/mec_ws/mec_ws/src/my_py_pkg' returned '0': AMENT_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/my_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/my_interfaces LD_LIBRARY_PATH=/home/bill8/mec_ws/mec_ws/install/my_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bill8/mec_ws/mec_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bill8/mec_ws/mec_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/bill8/mec_ws/mec_ws/install/my_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_py_pkg build --build-base /home/bill8/mec_ws/mec_ws/build/my_py_pkg/build install --record /home/bill8/mec_ws/mec_ws/build/my_py_pkg/install.log --single-version-externally-managed install_data

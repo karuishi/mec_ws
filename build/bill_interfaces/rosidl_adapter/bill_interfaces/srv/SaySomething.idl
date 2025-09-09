@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from bill_interfaces/srv/SaySomething.srv
+// generated code does not contain a copyright notice
+
+
+module bill_interfaces {
+  module srv {
+    struct SaySomething_Request {
+      string something;
+    };
+    struct SaySomething_Response {
+      boolean said;
+    };
+  };
+};

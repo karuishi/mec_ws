@@ -1,0 +1,3 @@
+/home/bill8/mec_ws/mec_ws/build/my_interfaces/rosidl_adapter/my_interfaces:msg/HardwareStatus.idl
+/home/bill8/mec_ws/mec_ws/build/my_interfaces/rosidl_adapter/my_interfaces:srv/ComputeRectangleArea.idl
+/home/bill8/mec_ws/mec_ws/build/my_interfaces/rosidl_adapter/my_interfaces:action/CountUntil.idl

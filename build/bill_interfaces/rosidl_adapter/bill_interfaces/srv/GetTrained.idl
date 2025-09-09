@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from bill_interfaces/srv/GetTrained.srv
+// generated code does not contain a copyright notice
+
+
+module bill_interfaces {
+  module srv {
+    struct GetTrained_Request {
+      string name;
+    };
+    struct GetTrained_Response {
+      boolean trained;
+    };
+  };
+};
