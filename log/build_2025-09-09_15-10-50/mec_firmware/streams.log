@@ -1,0 +1,134 @@
+[0.030s] Invoking command in '/home/bill8/mec_ws/mec_ws/build/mec_firmware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bill8/mec_ws/mec_ws/src/mec_firmware -DCMAKE_INSTALL_PREFIX=/home/bill8/mec_ws/mec_ws/install/mec_firmware
+[0.153s] -- The C compiler identification is GNU 11.4.0
+[0.283s] -- The CXX compiler identification is GNU 11.4.0
+[0.300s] -- Detecting C compiler ABI info
+[0.439s] -- Detecting C compiler ABI info - done
+[0.457s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.458s] -- Detecting C compile features
+[0.458s] -- Detecting C compile features - done
+[0.465s] -- Detecting CXX compiler ABI info
+[0.619s] -- Detecting CXX compiler ABI info - done
+[0.634s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.635s] -- Detecting CXX compile features
+[0.636s] -- Detecting CXX compile features - done
+[0.639s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.943s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.129s] -- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+[1.134s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[1.233s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.243s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.258s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.282s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.312s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.414s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.420s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.605s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.672s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.762s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.778s] -- Looking for pthread.h
+[1.922s] -- Looking for pthread.h - found
+[1.923s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.066s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.068s] -- Found Threads: TRUE  
+[2.208s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[2.213s] -- Found rclcpp_lifecycle: 16.0.12 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[2.264s] -- Found hardware_interface: 2.51.0 (/opt/ros/humble/share/hardware_interface/cmake)
+[2.590s] -- Checking for module 'libserial'
+[2.617s] --   Found libserial, version 1.0.0
+[2.848s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.990s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.990s] -- Configured cppcheck include dirs: /home/bill8/mec_ws/mec_ws/src/mec_firmware/include;/home/bill8/mec_ws/mec_ws/src/mec_firmware/
+[2.991s] -- Configured cppcheck exclude dirs and/or files: 
+[2.992s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.992s] -- Added test 'lint_cmake' to check CMake code style
+[2.993s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.995s] -- Added test 'uncrustify' to check C / C++ code style
+[2.995s] -- Configured uncrustify additional arguments: 
+[2.996s] -- Added test 'xmllint' to check XML markup files
+[3.000s] -- Configuring done
+[3.067s] -- Generating done
+[3.080s] -- Build files have been written to: /home/bill8/mec_ws/mec_ws/build/mec_firmware
+[3.095s] Invoked command in '/home/bill8/mec_ws/mec_ws/build/mec_firmware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bill8/mec_ws/mec_ws/src/mec_firmware -DCMAKE_INSTALL_PREFIX=/home/bill8/mec_ws/mec_ws/install/mec_firmware
+[3.099s] Invoking command in '/home/bill8/mec_ws/mec_ws/build/mec_firmware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/bill8/mec_ws/mec_ws/build/mec_firmware -- -j16 -l16
+[3.182s] [ 16%] [32mBuilding CXX object CMakeFiles/simple_serial_transmitter.dir/src/simple_serial_transmitter.cpp.o[0m
+[3.188s] [ 33%] [32mBuilding CXX object CMakeFiles/simple_lifecycle_node.dir/src/simple_lifecycle_node.cpp.o[0m
+[3.188s] [ 50%] [32mBuilding CXX object CMakeFiles/mec_firmware.dir/src/mec_hardware_interface.cpp.o[0m
+[3.199s] [ 50%] Built target ament_cmake_python_copy_mec_firmware
+[3.793s] running egg_info
+[3.794s] creating mec_firmware.egg-info
+[3.795s] writing mec_firmware.egg-info/PKG-INFO
+[3.795s] writing dependency_links to mec_firmware.egg-info/dependency_links.txt
+[3.795s] writing top-level names to mec_firmware.egg-info/top_level.txt
+[3.796s] writing manifest file 'mec_firmware.egg-info/SOURCES.txt'
+[3.801s] reading manifest file 'mec_firmware.egg-info/SOURCES.txt'
+[3.802s] writing manifest file 'mec_firmware.egg-info/SOURCES.txt'
+[3.852s] [ 50%] Built target ament_cmake_python_build_mec_firmware_egg
+[12.679s] [ 66%] [32m[1mLinking CXX shared library libmec_firmware.so[0m
+[13.057s] [ 66%] Built target mec_firmware
+[19.537s] [ 83%] [32m[1mLinking CXX executable simple_lifecycle_node[0m
+[19.695s] [100%] [32m[1mLinking CXX executable simple_serial_transmitter[0m
+[20.091s] [100%] Built target simple_lifecycle_node
+[20.203s] [100%] Built target simple_serial_transmitter
+[20.217s] Invoked command in '/home/bill8/mec_ws/mec_ws/build/mec_firmware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/bill8/mec_ws/mec_ws/build/mec_firmware -- -j16 -l16
+[20.219s] Invoking command in '/home/bill8/mec_ws/mec_ws/build/mec_firmware': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/bill8/mec_ws/mec_ws/build/mec_firmware
+[20.229s] -- Install configuration: ""
+[20.229s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/environment/pythonpath.sh
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/environment/pythonpath.dsv
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware-0.0.0-py3.10.egg-info
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware-0.0.0-py3.10.egg-info/dependency_links.txt
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware-0.0.0-py3.10.egg-info/SOURCES.txt
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware-0.0.0-py3.10.egg-info/PKG-INFO
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware-0.0.0-py3.10.egg-info/top_level.txt
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/simple_serial_transmitter.py
+[20.230s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/simple_serial_receiver.py
+[20.231s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino
+[20.231s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/serial_transmitter
+[20.231s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/serial_transmitter/serial_transmitter.ino
+[20.231s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/mec_control
+[20.231s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/mec_control/mec_control.ino
+[20.231s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/serial_receiver
+[20.231s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/serial_receiver/serial_receiver.ino
+[20.231s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/__init__.py
+[20.273s] Listing '/home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware'...
+[20.273s] Compiling '/home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/__init__.py'...
+[20.273s] Listing '/home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino'...
+[20.273s] Listing '/home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/mec_control'...
+[20.273s] Listing '/home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/serial_receiver'...
+[20.273s] Listing '/home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/arduino/serial_transmitter'...
+[20.274s] Compiling '/home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/simple_serial_receiver.py'...
+[20.274s] Compiling '/home/bill8/mec_ws/mec_ws/install/mec_firmware/local/lib/python3.10/dist-packages/mec_firmware/simple_serial_transmitter.py'...
+[20.279s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/mec_hardware_interface.xml
+[20.279s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/lib/mec_firmware/simple_serial_transmitter
+[20.281s] -- Set runtime path of "/home/bill8/mec_ws/mec_ws/install/mec_firmware/lib/mec_firmware/simple_serial_transmitter" to ""
+[20.282s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/lib/mec_firmware/simple_lifecycle_node
+[20.284s] -- Set runtime path of "/home/bill8/mec_ws/mec_ws/install/mec_firmware/lib/mec_firmware/simple_lifecycle_node" to ""
+[20.284s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/lib/libmec_firmware.so
+[20.285s] -- Set runtime path of "/home/bill8/mec_ws/mec_ws/install/mec_firmware/lib/libmec_firmware.so" to ""
+[20.285s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/include/include
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/include/include/mec_firmware
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/include/include/mec_firmware/mec_hardware_interface.hpp
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/lib/mec_firmware/simple_serial_transmitter.py
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/lib/mec_firmware/simple_serial_receiver.py
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/environment/library_path.sh
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/environment/library_path.dsv
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/ament_index/resource_index/package_run_dependencies/mec_firmware
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/ament_index/resource_index/parent_prefix_path/mec_firmware
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/environment/ament_prefix_path.sh
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/environment/ament_prefix_path.dsv
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/environment/path.sh
+[20.286s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/environment/path.dsv
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/local_setup.bash
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/local_setup.sh
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/local_setup.zsh
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/local_setup.dsv
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/package.dsv
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/ament_index/resource_index/packages/mec_firmware
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/mec_firmware
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/cmake/ament_cmake_export_include_directories-extras.cmake
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/cmake/ament_cmake_export_libraries-extras.cmake
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/cmake/ament_cmake_export_dependencies-extras.cmake
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/cmake/mec_firmwareConfig.cmake
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/cmake/mec_firmwareConfig-version.cmake
+[20.287s] -- Installing: /home/bill8/mec_ws/mec_ws/install/mec_firmware/share/mec_firmware/package.xml
+[20.289s] Invoked command in '/home/bill8/mec_ws/mec_ws/build/mec_firmware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/bill8/mec_ws/mec_ws/build/mec_firmware

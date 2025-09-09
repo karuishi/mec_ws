@@ -6,6 +6,7 @@
             <param name="calculate_dynamics">true</param>-->
             <plugin>mec_firmware/MecHardwareInterface</plugin>
             <param name="port">/dev/ttyUSB0</param>
+
         </hardware>
         
         <!-- Front wheels -->

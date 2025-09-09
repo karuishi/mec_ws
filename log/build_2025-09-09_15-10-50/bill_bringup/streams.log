@@ -1,0 +1,46 @@
+[0.020s] Invoking command in '/home/bill8/mec_ws/mec_ws/build/bill_bringup': AMENT_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission:/home/bill8/mec_ws/mec_ws/install/bill_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission/lib/python3.10/site-packages:/home/bill8/mec_ws/mec_ws/install/bill_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/bill8/mec_ws/mec_ws/src/bill_bringup -DCMAKE_INSTALL_PREFIX=/home/bill8/mec_ws/mec_ws/install/bill_bringup
+[0.124s] -- The C compiler identification is GNU 11.4.0
+[0.228s] -- The CXX compiler identification is GNU 11.4.0
+[0.241s] -- Detecting C compiler ABI info
+[0.371s] -- Detecting C compiler ABI info - done
+[0.386s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.386s] -- Detecting C compile features
+[0.387s] -- Detecting C compile features - done
+[0.393s] -- Detecting CXX compiler ABI info
+[0.531s] -- Detecting CXX compiler ABI info - done
+[0.548s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.548s] -- Detecting CXX compile features
+[0.549s] -- Detecting CXX compile features - done
+[0.553s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.829s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.976s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.105s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.106s] -- Added test 'lint_cmake' to check CMake code style
+[1.106s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.107s] -- Added test 'xmllint' to check XML markup files
+[1.109s] -- Configuring done
+[1.112s] -- Generating done
+[1.115s] -- Build files have been written to: /home/bill8/mec_ws/mec_ws/build/bill_bringup
+[1.122s] Invoked command in '/home/bill8/mec_ws/mec_ws/build/bill_bringup' returned '0': AMENT_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission:/home/bill8/mec_ws/mec_ws/install/bill_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission/lib/python3.10/site-packages:/home/bill8/mec_ws/mec_ws/install/bill_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/bill8/mec_ws/mec_ws/src/bill_bringup -DCMAKE_INSTALL_PREFIX=/home/bill8/mec_ws/mec_ws/install/bill_bringup
+[1.124s] Invoking command in '/home/bill8/mec_ws/mec_ws/build/bill_bringup': AMENT_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission:/home/bill8/mec_ws/mec_ws/install/bill_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission/lib/python3.10/site-packages:/home/bill8/mec_ws/mec_ws/install/bill_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/bill8/mec_ws/mec_ws/build/bill_bringup -- -j16 -l16
+[1.187s] Invoked command in '/home/bill8/mec_ws/mec_ws/build/bill_bringup' returned '0': AMENT_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission:/home/bill8/mec_ws/mec_ws/install/bill_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission/lib/python3.10/site-packages:/home/bill8/mec_ws/mec_ws/install/bill_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/bill8/mec_ws/mec_ws/build/bill_bringup -- -j16 -l16
+[1.191s] Invoking command in '/home/bill8/mec_ws/mec_ws/build/bill_bringup': AMENT_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission:/home/bill8/mec_ws/mec_ws/install/bill_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission/lib/python3.10/site-packages:/home/bill8/mec_ws/mec_ws/install/bill_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/bill8/mec_ws/mec_ws/build/bill_bringup
+[1.202s] -- Install configuration: ""
+[1.203s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/launch
+[1.203s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/launch/person_identification_mission.launch.py
+[1.203s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/ament_index/resource_index/package_run_dependencies/bill_bringup
+[1.203s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/ament_index/resource_index/parent_prefix_path/bill_bringup
+[1.204s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/environment/ament_prefix_path.sh
+[1.204s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/environment/ament_prefix_path.dsv
+[1.204s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/environment/path.sh
+[1.204s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/environment/path.dsv
+[1.204s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/local_setup.bash
+[1.205s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/local_setup.sh
+[1.205s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/local_setup.zsh
+[1.205s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/local_setup.dsv
+[1.205s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/package.dsv
+[1.205s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/ament_index/resource_index/packages/bill_bringup
+[1.205s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/cmake/bill_bringupConfig.cmake
+[1.205s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/cmake/bill_bringupConfig-version.cmake
+[1.206s] -- Installing: /home/bill8/mec_ws/mec_ws/install/bill_bringup/share/bill_bringup/package.xml
+[1.209s] Invoked command in '/home/bill8/mec_ws/mec_ws/build/bill_bringup' returned '0': AMENT_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission:/home/bill8/mec_ws/mec_ws/install/bill_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/bill8/mec_ws/mec_ws/install/bill_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bill8/mec_ws/mec_ws/install/person_identification_mission/lib/python3.10/site-packages:/home/bill8/mec_ws/mec_ws/install/bill_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/bill8/mec_ws/mec_ws/build/bill_bringup

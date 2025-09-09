@@ -39,6 +39,7 @@ CallbackReturn MecHardwareInterface::on_init(const hardware_interface::HardwareI
     velocity_commands_.resize(info_.joints.size(), 0.0);
     position_states_.resize(info_.joints.size(), 0.0);
     velocity_states_.resize(info_.joints.size(), 0.0);
+
     last_run_ = rclcpp::Clock().now();
 
     return CallbackReturn::SUCCESS;
@@ -88,6 +89,7 @@ CallbackReturn MecHardwareInterface::on_deactivate(const rclcpp_lifecycle::State
    (void)previous_state;
 
     RCLCPP_INFO(rclcpp::get_logger("MecHardwareInterface"), "Stopping robot hardware...");
+  
     try 
     {
         esp32_.Close();
@@ -124,7 +126,8 @@ hardware_interface::return_type MecHardwareInterface::read(const rclcpp::Time &t
         std::stringstream ss(message);
         std::string res;
         int multiplier=1;
-        RCLCPP_WARN(rclcpp::get_logger("MecHardwareInterface"),"Reading: '%s'", message.c_str());
+
+      RCLCPP_WARN(rclcpp::get_logger("MecHardwareInterface"),"Reading: '%s'", message.c_str());
         while (std::getline(ss, res, ','))
         {
             if (res.size() < 3) {
@@ -132,6 +135,7 @@ hardware_interface::return_type MecHardwareInterface::read(const rclcpp::Time &t
                 continue; // end of the message reached or message not well-formed  
             }   
             multiplier = res.at(2) == 'p' ? 1 : -1;  
+
             // Front Left (fl)
             if (res.rfind("fl", 0) == 0)
             {

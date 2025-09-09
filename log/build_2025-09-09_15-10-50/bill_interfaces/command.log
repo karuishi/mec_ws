@@ -1,0 +1,6 @@
+Invoking command in '/home/bill8/mec_ws/mec_ws/build/bill_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bill8/mec_ws/mec_ws/src/bill_interfaces -DCMAKE_INSTALL_PREFIX=/home/bill8/mec_ws/mec_ws/install/bill_interfaces
+Invoked command in '/home/bill8/mec_ws/mec_ws/build/bill_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bill8/mec_ws/mec_ws/src/bill_interfaces -DCMAKE_INSTALL_PREFIX=/home/bill8/mec_ws/mec_ws/install/bill_interfaces
+Invoking command in '/home/bill8/mec_ws/mec_ws/build/bill_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/bill8/mec_ws/mec_ws/build/bill_interfaces -- -j16 -l16
+Invoked command in '/home/bill8/mec_ws/mec_ws/build/bill_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/bill8/mec_ws/mec_ws/build/bill_interfaces -- -j16 -l16
+Invoking command in '/home/bill8/mec_ws/mec_ws/build/bill_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/bill8/mec_ws/mec_ws/build/bill_interfaces
+Invoked command in '/home/bill8/mec_ws/mec_ws/build/bill_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/bill8/mec_ws/mec_ws/build/bill_interfaces

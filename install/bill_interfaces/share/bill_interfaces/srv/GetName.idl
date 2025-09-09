@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from bill_interfaces/srv/GetName.srv
+// generated code does not contain a copyright notice
+
+
+module bill_interfaces {
+  module srv {
+    struct GetName_Request {
+      string default_name;
+    };
+    struct GetName_Response {
+      string name_listened;
+    };
+  };
+};

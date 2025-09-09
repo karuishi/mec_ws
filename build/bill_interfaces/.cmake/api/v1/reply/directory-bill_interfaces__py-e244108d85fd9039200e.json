@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "bill_interfaces__py",
+		"source" : "/home/bill8/mec_ws/mec_ws/build/bill_interfaces/bill_interfaces__py"
+	}
+}
