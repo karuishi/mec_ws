@@ -10,6 +10,8 @@ def generate_launch_description():
     robot_bringup_path = get_package_share_path('mec_bringup')
     urdf_path = os.path.join(robot_description_path, 'urdf', 'mec.urdf.xacro')
     rviz_config_path = os.path.join(robot_description_path, 'rviz', 'urdf_config.rviz')
+    rviz_mapping_config_path = os.path.join(robot_description_path, 'rviz', 'mapping.rviz')
+
     
     robot_description = ParameterValue(Command(['xacro ', urdf_path]), value_type=str)
     robot_controllers = os.path.join(robot_bringup_path, 'config', 'mec_controllers.yaml')
@@ -46,7 +48,7 @@ def generate_launch_description():
         package="rviz2",
         executable="rviz2",
         name="rviz2",
-        arguments=["-d", rviz_config_path],
+        arguments=["-d", rviz_mapping_config_path],
     )
     return LaunchDescription([
         robot_state_publisher_node,

@@ -150,8 +150,8 @@
                     </horizontal>
                 </scan>
                 <range>
-                    <min>0.15</min>
-                    <max>20</max>
+                    <min>0.02</min>
+                    <max>12</max>
                 </range>
             </ray>
 
