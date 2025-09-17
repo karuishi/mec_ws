@@ -8,6 +8,7 @@ import os
 def generate_launch_description():
     robot_description_path = get_package_share_path('mec_description')
     robot_bringup_path = get_package_share_path('mec_bringup')
+
     urdf_path = os.path.join(robot_description_path, 'urdf', 'mec.urdf.xacro')
     rviz_config_path = os.path.join(robot_description_path, 'rviz', 'urdf_config.rviz')
     rviz_mapping_config_path = os.path.join(robot_description_path, 'rviz', 'mapping.rviz')
@@ -27,11 +28,12 @@ def generate_launch_description():
         parameters=[{'robot_description': robot_description}, robot_controllers],
         remappings=[
             ('/controller_manager/robot_description', '/robot_description'),
-            ('/mecanum_drive_controller/odometry', '/odom'),
-            ('/mecanum_drive_controller/tf_odometry', '/tf'),
+            # ('/mecanum_drive_controller/odometry', '/odom'),
+            # ('/mecanum_drive_controller/tf_odometry', '/tf'),
             ('/mecanum_drive_controller/reference_unstamped','/cmd_vel')
         ]
     )  
+
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
