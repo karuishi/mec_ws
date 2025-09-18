@@ -57,5 +57,5 @@ def generate_launch_description():
         control_node,
         joint_state_broadcaster_spawner,
         mecanum_drive_controller_spawner,
-        rviz_node,
+        # rviz_node,
     ])
