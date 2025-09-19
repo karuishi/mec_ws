@@ -1,0 +1,82 @@
+#rodar os seguintes lanunches na ordem:
+#ros2 launch mec_bringup mec.launch.py  
+#ros2 launch lslidar_driver lslidar_launch.py  
+#ros2 launch rf2o_laser_odometry rf2o_laser_odometry.launch.py  
+#ros2 launch mec_navigation mapping.launch.py  
+
+from launch import LaunchDescription
+from launch_ros.parameter_descriptions import ParameterValue
+from launch.substitutions import Command
+from launch_ros.actions import Node
+import os
+from ament_index_python.packages import get_package_share_path
+from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+
+def generate_launch_description():
+
+    #localization_launch = IncludeLaunchDescription(
+    #    PythonLaunchDescriptionSource(nav2_localization_launch_path),
+    #    launch_arguments={
+    #            'use_sim_time': LaunchConfiguration('use_sim_time'),
+    #            'params_file': localization_params_path,
+    #            'map': map_file_path,
+    #    }.items()
+    #)
+    
+    mec_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('mec_bringup'),
+            'launch',
+            'mec.launch.py'
+        )),
+    )
+
+    lidar_driver_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('lslidar_driver'),
+            'launch',
+            'lslidar_launch.py'
+        )),
+    )
+    
+    rf2o_laser_odometry_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('rf2o_laser_odometry'),
+            'launch',
+            'rf2o_laser_odometry.launch.py'
+        )),
+    )   
+
+    mec_navigation_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('mec_navigation'),
+            'launch',
+            'navigation.launch.py'
+        )),
+    )   
+    
+    return LaunchDescription([
+        mec_launch,
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(os.path.join(
+        #         get_package_share_path('mec_bringup'),
+        #         'launch',
+        #         'mec.launch.py'
+        #     )),
+        # ),
+        #
+        TimerAction(
+            period=5.0,
+            actions=[lidar_driver_launch]
+        ),
+        TimerAction(
+            period=10.0,
+            actions=[rf2o_laser_odometry_launch]
+        ),
+            
+        TimerAction(
+            period=15.0,
+            actions=[mec_navigation_launch]
+        ),
+    ])  
