@@ -1,9 +1,3 @@
-#rodar os seguintes lanunches na ordem:
-#ros2 launch mec_bringup mec.launch.py  
-#ros2 launch lslidar_driver lslidar_launch.py  
-#ros2 launch rf2o_laser_odometry rf2o_laser_odometry.launch.py  
-#ros2 launch mec_navigation mapping.launch.py  
-
 from launch import LaunchDescription
 from launch_ros.parameter_descriptions import ParameterValue
 from launch.substitutions import Command
@@ -71,12 +65,12 @@ def generate_launch_description():
             actions=[lidar_driver_launch]
         ),
         TimerAction(
-            period=10.0,
+            period=7.0,
             actions=[rf2o_laser_odometry_launch]
         ),
             
         TimerAction(
-            period=15.0,
+            period=10.0,
             actions=[mec_navigation_launch]
         ),
     ])  

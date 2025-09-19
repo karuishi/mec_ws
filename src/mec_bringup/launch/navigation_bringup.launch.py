@@ -18,7 +18,64 @@ def generate_launch_description():
     #    }.items()
     #)
     
-    
+    mec_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('mec_bringup'),
+            'launch',
+            'mec.launch.py'
+        )),
+    )
+
+    lidar_driver_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('lslidar_driver'),
+            'launch',
+            'lslidar_launch.py'
+        )),
+    )
+
+    rf2o_laser_odometry_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('rf2o_laser_odometry'),
+            'launch',
+            'rf2o_laser_odometry.launch.py'
+        )),
+    )
+
+    robot_localization_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('mec_navigation'),
+            'launch',
+            'robot_localization.launch.py'
+        ))
+    )
+
+    mec_navigation_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            get_package_share_path('mec_navigation'),
+            'launch',
+            'navigation.launch.py'
+        )),
+    )   
+
+
     
     return LaunchDescription([
+        mec_launch,
+        TimerAction(
+            period=5.0,
+            actions=[lidar_driver_launch]
+        ),
+        TimerAction(
+            period=10.0,
+            actions=[rf2o_laser_odometry_launch]
+        ),
+        TimerAction(
+            period=12.0,
+            actions=[robot_localization_launch]
+        ),
+        TimerAction(
+            period=15.0,
+            actions=[mec_navigation_launch]
+        ),
     ])  
