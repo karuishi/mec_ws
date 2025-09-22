@@ -33,10 +33,14 @@ def generate_launch_description():
         )),
     )
 
-    robot_localization_launch = os.path.join(
-        get_package_share_path('mec_navigation'),
-        'launch',
-        'robot_localization.launch.py'
+    robot_localization_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_path('mec_navigation'),
+                'launch',
+                'robot_localization.launch.py'
+            )
+        )
     )
 
     mec_navigation_launch = IncludeLaunchDescription(
