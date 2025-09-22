@@ -8,15 +8,6 @@ from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 def generate_launch_description():
-
-    #localization_launch = IncludeLaunchDescription(
-    #    PythonLaunchDescriptionSource(nav2_localization_launch_path),
-    #    launch_arguments={
-    #            'use_sim_time': LaunchConfiguration('use_sim_time'),
-    #            'params_file': localization_params_path,
-    #            'map': map_file_path,
-    #    }.items()
-    #)
     
     mec_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
@@ -50,6 +41,14 @@ def generate_launch_description():
         ))
     )
 
+    localization_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.joint(
+            get_package_share_path('mec_navigation'),
+            'launch',
+            'localization.launch.py'
+        )),
+    )
+
     mec_navigation_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
             get_package_share_path('mec_navigation'),
@@ -57,25 +56,27 @@ def generate_launch_description():
             'navigation.launch.py'
         )),
     )   
-
-
     
     return LaunchDescription([
         mec_launch,
         TimerAction(
-            period=5.0,
+            period=2.0,
             actions=[lidar_driver_launch]
         ),
         TimerAction(
-            period=10.0,
+            period=4.0,
             actions=[rf2o_laser_odometry_launch]
         ),
         TimerAction(
-            period=12.0,
+            period=6.0,
             actions=[robot_localization_launch]
         ),
         TimerAction(
-            period=15.0,
+            period=8.0,
+            actions=[localization_launch]
+        ),
+        TimerAction(
+            period=10.0,
             actions=[mec_navigation_launch]
         ),
     ])  
